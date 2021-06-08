@@ -3,7 +3,7 @@ import DumbGram from '../img/DumbGram.png'
 
 import './css/LeftHome.css';
 
-export default function MyComponent() {
+export default function LeftHome() {
   return (
     <Col lg={5}>
       <img src={ DumbGram } className="lh-img-icon" alt="DumbGram-Icon"/>

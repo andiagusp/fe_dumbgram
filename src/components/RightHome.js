@@ -10,7 +10,7 @@ import Rt6 from '../img/rt6.png';
 import Rt7 from '../img/rt7.png';
 import Rt8 from '../img/rt8.png';
 
-export default function MyComponent() {
+export default function RightHome() {
   return (
     <Col lg={7}>
       <div className="rh-img-row">
