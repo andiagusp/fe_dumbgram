@@ -1,4 +1,4 @@
-import { Row, Col } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 import './css/RightHome.css';
 
 import Rt1 from '../img/rt1.png';

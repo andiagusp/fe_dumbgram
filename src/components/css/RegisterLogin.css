@@ -1,0 +1,89 @@
+.rl-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 1;
+  color: #fff;
+}
+
+.r-body {
+  box-sizing: border-box;
+  position: fixed;
+  border-radius: 5px;
+  background-color: #1F1F1F;
+  top: 100px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  width: 420px;
+  margin: 0 auto;
+  padding: 40px 30px;
+}
+
+.r-title {
+  margin-bottom: 20px;
+  font-weight: 900;
+}
+
+.r-form-group {
+  margin: 15px 0;
+}
+
+.r-form-group > input:focus {
+  color: #fff;
+  font-weight: 700;
+}
+
+.r-form-input {
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  border: 2px solid rgba(210, 210, 210, 1);
+  background-color: rgba(210, 210, 210, 0.25);
+  box-sizing: border-box;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.r-btn-rainbow {
+  width: 100%;
+  background: linear-gradient(90deg, #4DD4F7 0%, #9090FB 36.46%, #FF6B81 71.35%, #FBDF63 100%);
+  font-size: 18px;
+  font-weight: 900;
+  color:  #fff;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  padding: 15px;
+}
+
+.r-btn-rainbow:active {
+  background: #fff;
+  color: #000;
+}
+
+.r-text-bottom {
+  color: rgba(177, 177, 177, 1);
+  font-weight: 800;
+  font-size: 18px;
+  text-align: center;
+}
+
+.r-text-bottom > span {
+  color: rgba(177, 177, 177, .5);
+}
+
+.r-text-bottom > span:hover {
+  cursor: pointer;
+}
+
+.r-text-bottom > span:active {
+  cursor: pointer;
+  color: rgba(177, 177, 177, 1);
+}
+
