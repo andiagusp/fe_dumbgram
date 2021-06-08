@@ -1,8 +1,11 @@
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import './css/RegisterLogin.css';
 
 export default function RegisterLogin(props) {
+  const history = useHistory();
   const { show, nameModal, handleClose, handleChangeModal } = props;
+  const [login, setLogin] = useState({email: '', password: ''});
   const [register, setRegister] = useState({
     email: '',
     name: '',
@@ -11,9 +14,10 @@ export default function RegisterLogin(props) {
   });
   let modal = null;
 
-  const handleChangeModalLogin = (e) => alert('oke');
+  const handleChangeModalLogin = (e) => handleChangeModal('login');
+  const handleChangeModalRegister = (e) => handleChangeModal('register');
 
-  const handleFormSubmit = (event) => {
+  const handleFormSubmitRegister = (event) => {
     event.preventDefault();
     localStorage.setItem('user', JSON.stringify(register));
     alert('Succes Registration');
@@ -32,6 +36,24 @@ export default function RegisterLogin(props) {
     })
   }
 
+  const handleFormSubmitLogin = (event) => {
+    event.preventDefault();
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (user.email === login.email && user.password === login.password) {
+      alert('login success');
+      history.push('/feed');
+      setLogin({email: '', password: ''});
+    }
+  }
+
+  const handleInputLogin = (event) => {
+    const value = event.target.value;
+    setLogin({
+      ...login,
+      [event.target.name]: value
+    })
+  }
+
   const handleCloseRegister = () => {
     handleClose(false);
     handleChangeModal('');
@@ -44,7 +66,7 @@ export default function RegisterLogin(props) {
         <div className="r-body">
         <h1 className="r-title">Register</h1>
         <div className="r-content">
-          <form onSubmit={ handleFormSubmit }>
+          <form onSubmit={ handleFormSubmitRegister }>
             <div className="r-form-group">
               <input type="text" className="r-form-input" onChange={ handleInputRegister } value={ register.email } name="email" placeholder="Email" />
             </div>
@@ -65,6 +87,29 @@ export default function RegisterLogin(props) {
         </div>
       </div>
     </>
+    );
+  }
+
+  if (nameModal === 'login') {
+    modal = (
+      <>
+      <div className="rl-overlay" onClick={ handleCloseRegister }></div>
+        <div className="l-body">
+          <h1 className="l-title">Login</h1>
+          <form onSubmit={ handleFormSubmitLogin }>
+            <div className="l-form-group">
+              <input type="text" className="l-form-input" onChange={ handleInputLogin } value={ login.email } name="email" placeholder="Email" />
+            </div>
+            <div className="l-form-group">
+              <input type="password" className="l-form-input" onChange={ handleInputLogin } value={ login.password} name="password" placeholder="Password" />
+            </div>
+            <div className="l-form-group">
+              <button className="l-btn-rainbow">Login</button>
+            </div>
+          </form>
+          <p className="r-text-bottom">Already have an account ? Click <span onClick={ handleChangeModalRegister }>Here</span></p>
+        </div>
+      </>
     );
   }
   return show && modal;

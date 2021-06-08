@@ -9,7 +9,8 @@
   color: #fff;
 }
 
-.r-body {
+.r-body,
+.l-body {
   box-sizing: border-box;
   position: fixed;
   border-radius: 5px;
@@ -23,12 +24,14 @@
   padding: 40px 30px;
 }
 
-.r-title {
+.r-title,
+.l-title {
   margin-bottom: 20px;
   font-weight: 900;
 }
 
-.r-form-group {
+.r-form-group,
+.l-form-group {
   margin: 15px 0;
 }
 
@@ -37,7 +40,8 @@
   font-weight: 700;
 }
 
-.r-form-input {
+.r-form-input,
+.l-form-input {
   font-size: 18px;
   font-weight: 800;
   color: #fff;
@@ -50,7 +54,8 @@
   padding: 10px 20px;
 }
 
-.r-btn-rainbow {
+.r-btn-rainbow,
+.l-btn-rainbow {
   width: 100%;
   background: linear-gradient(90deg, #4DD4F7 0%, #9090FB 36.46%, #FF6B81 71.35%, #FBDF63 100%);
   font-size: 18px;
