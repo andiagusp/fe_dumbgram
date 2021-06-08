@@ -1,0 +1,26 @@
+.rh-img-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.rh-img-col {
+  flex: 30%;
+}
+
+.rh-img-col > img {
+  padding: 2px;
+  width: 100%;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 800px) {
+  .rh-img-row {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .rh-img-row {
+    margin-top: 30px;
+  }
+}

@@ -1,0 +1,13 @@
+.home-background {
+  background-color: #0B0B0B;
+  color: #fff;
+  font-size: 18px;
+  max-width: 1440px;
+  padding: 100px 50px;
+}
+
+@media screen and (max-width: 780px) {
+  .home-background {
+    padding: 30px 15px;
+  }
+}
