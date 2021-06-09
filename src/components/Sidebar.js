@@ -14,11 +14,18 @@ export default function Sidebar() {
 	let username = null;
 	let location = null;
 	let textBio = null;
+	let buttonFollow = null;
 	if (window.location.pathname.substring(1) === 'profile-people') {
 		name = 'Zayn Malik';
 		username = '@zayn';
 		location = window.location.pathname.substring(1);
 		textBio = 'Nobody is Listening Out Now! www.inzayn.com';
+		buttonFollow = (
+			<div className="sb-fm">
+				<button className="sb-btn-message-rainbow">Message</button>
+				<button className="sb-btn-follow">Unfollow</button>
+			</div>
+		);
 	}
 	return(
 		<div className="sidebar sb-list-toggle">
@@ -34,10 +41,7 @@ export default function Sidebar() {
 				<p className="sb-name">{ name || 'Lisa' }</p>
 				<p className="sb-username">{ username || '@lalalisa_m'}</p>
 			</div>
-			<div className="sb-fm">
-				<button className="sb-btn-message-rainbow">Message</button>
-				<button className="sb-btn-follow">Unfollow</button>
-			</div>
+			{ buttonFollow }
 			<div className="sb-pff">
 				<ul>
 					<li>
