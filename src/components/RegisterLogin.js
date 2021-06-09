@@ -107,7 +107,7 @@ export default function RegisterLogin(props) {
               <button className="l-btn-rainbow">Login</button>
             </div>
           </form>
-          <p className="r-text-bottom">Already have an account ? Click <span onClick={ handleChangeModalRegister }>Here</span></p>
+          <p className="l-text-bottom">Already have an account ? Click <span onClick={ handleChangeModalRegister }>Here</span></p>
         </div>
       </>
     );

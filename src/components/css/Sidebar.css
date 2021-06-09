@@ -1,0 +1,149 @@
+.sidebar {
+	background-color: rgba(11, 11, 11, 1);
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 350px;
+	border-right: 1px solid rgba(106, 106, 106, 0.3);
+	height: 100vh;
+	color: #fff;
+	overflow-y: auto;
+}
+
+.sidebar::-webkit-scrollbar {
+	display: none;
+}
+
+.sidebar ul li {
+	list-style: none;
+}
+
+.sb-header {
+	padding-top: 20px;
+	padding-left: 50px;
+	margin-bottom: 50px;
+}
+
+.sb-name-bio {
+	text-align: center;
+	color:  #fff;
+	margin-bottom: 30px;
+	position: relative;
+}
+
+.sb-list-icon:hover {
+	cursor: pointer;
+}
+
+.sb-list-icon:active {
+	cursor: pointer;
+	background-color: #fff;
+}
+
+.sb-pen-icon {
+	position: absolute;
+	right: 30px;
+	top: -30px;
+}
+
+.sb-pen-icon:hover {
+	cursor: pointer;
+}
+
+.sb-pen-icon:active {
+	cursor: pointer;
+	background-color: #fff;
+	border-radius:  5px;
+}
+
+.sb-img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background: transparent;
+}
+
+.sb-name {
+	font-size: 24px;
+	font-weight: 900;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.sb-username {
+	font-size: 14px;
+	color: rgba(171, 171, 171, 1);
+}
+
+.sb-pff {
+	position: relative;
+	right: 10px;
+}
+
+.sb-pff ul li {
+	text-align: center;
+	list-style: none;
+	display: inline-block;
+	padding: 0 20px;
+}
+
+ul li.count {
+	font-size: 18px;
+}
+
+.sb-center {
+	border-right: 1px solid rgba(106, 106, 106, 0.3);
+	border-left: 1px solid rgba(106, 106, 106, 0.3);
+}
+
+.sb-bio {
+	padding: 5px 10px 5px 30px;
+}
+
+.sb-bio-text {
+	font-size: 12px;
+	margin: 30px 0;
+	color: #fff;
+}
+
+.sb-nav-link {
+	padding: 0 50px 0 0;
+}
+
+.sb-li-text {
+	margin-left: 20px;
+}
+
+.sb-nav-link ul li {
+	margin: 40px 0;
+}
+
+.sb-line {
+	border: 1px solid rgba(106, 106, 106, 0.3);
+	margin: 30px 0;
+}
+
+.sb-li-link {
+	color: #fff;
+}
+
+.sb-li-link:hover {
+	text-decoration: none;
+	color: rgba(171, 171, 171, 1);
+}
+
+.sb-li-link:active {
+	text-decoration: none;
+	color: #000;
+	background-color: rgba(171, 171, 171, 1);
+}
+
+
+@media screen and (max-width: 500px) {
+	/*.sidebar {
+		display: none;
+	}
+
+	.sb-list-icon {
+	}*/
+}

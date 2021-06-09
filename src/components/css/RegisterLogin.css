@@ -72,22 +72,26 @@
   color: #000;
 }
 
-.r-text-bottom {
+.r-text-bottom,
+.l-text-bottom {
   color: rgba(177, 177, 177, 1);
   font-weight: 800;
   font-size: 18px;
   text-align: center;
 }
 
-.r-text-bottom > span {
+.r-text-bottom > span,
+.l-text-bottom > span {
   color: rgba(177, 177, 177, .5);
 }
 
-.r-text-bottom > span:hover {
+.r-text-bottom > span:hover,
+.l-text-bottom > span:hover {
   cursor: pointer;
 }
 
-.r-text-bottom > span:active {
+.r-text-bottom > span:active,
+.l-text-bottom > span:active {
   cursor: pointer;
   color: rgba(177, 177, 177, 1);
 }

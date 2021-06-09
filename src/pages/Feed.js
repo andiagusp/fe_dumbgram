@@ -1,9 +1,13 @@
-import Navigation from '../components/Sidebar';
+import Navigation from '../components/Navigation';
 import Sidebar from '../components/Sidebar';
-import FeedContent from '../components/Sidebar';
+import FeedContent from '../components/FeedContent';
 
 export default function Feed() {
 	return(
-		<h1>My Component</h1>
+		<div className="feed">
+			<Navigation/>
+			<Sidebar />
+			<FeedContent />
+		</div>
 	);
 }

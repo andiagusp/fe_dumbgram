@@ -1,0 +1,38 @@
+.feedcontent {
+	color: #fff;
+	margin-left: 350px;
+	background-color: rgba(11, 11, 11, 1);
+	width: calc(100% - 350px);
+	margin-top: 140px;
+	padding: 20px;
+}
+
+.fc-card {
+	width: 300px;
+}
+
+.fc-card-feedback {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 5px;
+}
+
+.fc-card-img {
+	width: 300px;
+	border-radius: 5px;
+	margin-bottom: 15px;
+}
+
+.fc-card > p {
+	text-align: right;
+	margin-top: 10px;
+}
+
+.fc-card-icon-profile {
+	width: 24px;
+	border-radius: 50%;
+}
+
+.fc-cf-right > img {
+	margin-left: 10px;
+}
