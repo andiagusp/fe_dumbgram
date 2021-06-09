@@ -6,7 +6,7 @@ import './css/Feed.css';
 export default function Feed() {
 	return(
 		<div className="feed">
-			<Navigation/>
+			<Navigation titleNav="Feed" />
 			<Sidebar />
 			<FeedContent />
 		</div>

@@ -33,7 +33,9 @@ export default function Sidebar() {
 				<img src={ DumbGramIcon } alt="dumb-ico" />
 			</header>
 			<div className="sb-name-bio">
-				{ (location !== 'profile-people')&&<img src={ PenIcon } className="sb-pen-icon" alt="pen" />}
+				{ (location !== 'edit-profile' && location !== 'profile-people')?
+          <Link to="/edit-profile"><img src={ PenIcon } className="sb-pen-icon" alt="pen" /></Link> : ''
+        }
 				{
 					(location === 'profile-people')?
 					<img src={ ZaynImg } className="sb-img" alt="foto-profile" />:<img src={ Rt3 } className="sb-img" alt="foto-profile" />

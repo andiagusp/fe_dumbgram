@@ -3,6 +3,8 @@ import Home from './pages/Home';
 import Feed from './pages/Feed';
 import Explore from './pages/Explore';
 import ProfilePeople from './pages/ProfilePeople';
+import CreatePost from './pages/CreatePost';
+import EditProfile from './pages/EditProfile';
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -12,6 +14,12 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
+          <Route path="/edit-profile">
+            <EditProfile />
+          </Route>
+          <Route path="/create-post">
+            <CreatePost />
+          </Route>
           <Route path="/profile-people">
             <ProfilePeople />
           </Route>

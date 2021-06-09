@@ -6,7 +6,7 @@ import './css/Explore.css';
 export default function Feed() {
 	return(
 		<div className="explore">
-			<Navigation/>
+			<Navigation titleNav="Explore" />
 			<Sidebar />
 			<ExploreContent />
 		</div>

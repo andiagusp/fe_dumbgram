@@ -1,0 +1,63 @@
+.editprofilecontent {
+	color: #fff;
+	margin-left: 350px;
+	background-color: rgba(11, 11, 11, 1);
+	width: calc(100% - 350px);
+	margin-top: 120px;
+	padding: 50px 20px;
+	height: calc(100vh - 80px);
+	font-size: 18px;
+}
+
+.epc-form-group {
+	margin: 15px 0;
+}
+
+.epc-btn-upv,
+.epc-btn-upload {
+	background: linear-gradient(90deg, #4DD4F7 0%, #9090FB 36.46%, #FF6B81 71.35%, #FBDF63 100%);
+	font-size: 18px;
+	font-weight: 900;
+	padding: 10px 15px;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	color: #fff;
+}
+
+.epc-form-input {
+	width: calc(100% - 29px);
+	border: 2px solid rgba(210, 210, 210, 1);
+	background-color: rgba(210, 210, 210, .25);
+	color: rgba(210, 210, 210, 1);
+	padding: 10px;
+	font-weight: 700;
+	border-radius: 5px;
+}
+
+.epc-btn-upload {
+	margin-left: calc(100% - 100px);
+	margin-top: 10px;
+}
+
+.epc-btn-upv:active,
+.epc-btn-upload:active {
+	background: #fff;
+	color: #000;
+}
+
+
+.epc-textarea {
+	width: calc(100% - 29px);
+	border-radius: 5px;
+	border: 2px solid rgba(210, 210, 210, 1);
+	background-color: rgba(210, 210, 210, .25);
+	color: rgba(210, 210, 210, 1);
+	padding: 10px;
+	font-weight: 700;
+}
+
+.epc-textarea:focus,
+.epc-form-input {
+	outline: none;
+}
