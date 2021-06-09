@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Feed from './pages/Feed';
 import Explore from './pages/Explore';
+import ProfilePeople from './pages/ProfilePeople';
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -11,6 +12,9 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
+          <Route path="/profile-people">
+            <ProfilePeople />
+          </Route>
           <Route path="/explore">
             <Explore />
           </Route>

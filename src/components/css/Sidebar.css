@@ -40,6 +40,40 @@
 	background-color: #fff;
 }
 
+.sb-fm,
+.sb-fm > * {
+	padding: 10px 0 40px;
+	text-align: center;	
+}
+
+.sb-btn-message-rainbow {
+	background: linear-gradient(90deg, #4DD4F7 0%, #9090FB 36.46%, #FF6B81 71.35%, #FBDF63 100%);
+	color: #fff;
+	font-weight: 900;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+	margin: 0 10px;
+	padding: 10px 25px;
+}
+
+.sb-btn-follow {
+	padding: 10px 25px;
+	margin: 0 10px;
+	background-color: rgba(171, 171, 171, 0.15);;
+	color: #fff;
+	font-weight: 900;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+}
+
+.sb-btn-message-rainbow:active,
+.sb-btn-follow:active {
+	background: rgba(255, 255, 255, .9);
+	color: #000;
+}
+
 .sb-pen-icon {
 	position: absolute;
 	right: 30px;

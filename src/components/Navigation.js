@@ -4,10 +4,10 @@ import IconSearch from '../img/iconsearch.png';
 import './css/Navigation.css';
 
 export default function Navigation() {
-	const title = window.location.pathname;
+	const title = (window.location.pathname.substring(1) === 'profile-people') ? 'Zayn, Feed' : '';
 
 	return(
-		<div className="navigation">
+		<nav className="navigation">
 			<section className="nav-top">
 				<div className="nav-top-right">
 					<form action="" className="nav-form-search">
@@ -17,13 +17,13 @@ export default function Navigation() {
 				</div>
 				<div className="nav-top-left">
 					<BsBell className="nav-right-icon" />
-					<img src={ MessageIcon }  alt="messageair" />
+					<img src={ MessageIcon } className="nav-msg-icon" alt="messageair" />
 					<button className="nav-btn-rainbow"><span>+</span>Create Post</button>	
 				</div>
 			</section>
 			<section className="nav-down">
-				<h2 className="nav-title">{ title.substring(1) }</h2>
+				<h2 className="nav-title">{ title || window.location.pathname.substring(1) }</h2>
 			</section>
-		</div>
+		</nav>
 	);
 }

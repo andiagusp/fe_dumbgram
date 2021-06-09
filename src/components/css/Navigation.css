@@ -53,6 +53,21 @@
 
 .nav-right-icon {
 	font-size: 25px;
+	color: rgba(255,255,255, .6);
+}
+
+.nav-msg-icon:hover,
+.nav-right-icon:hover {
+	background: rgba(255, 255, 255, .3);
+	cursor: pointer;
+	color: #000;
+}
+
+.nav-msg-icon:active,
+.nav-right-icon:active {
+	background: rgba(0, 0, 0, .5);
+	cursor: pointer;
+	color: #fff;
 }
 
 .nav-btn-rainbow {

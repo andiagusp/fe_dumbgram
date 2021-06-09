@@ -7,18 +7,36 @@ import PenIcon from '../img/penicon.png';
 import HomeIcon from '../img/homeicon.png';
 import ExploreIcon from '../img/explorer.png';
 import LogoutIcon from '../img/logouticon.png';
+import ZaynImg from '../img/zaynprofile.png';
 
 export default function Sidebar() {
+	let name = null;
+	let username = null;
+	let location = null;
+	let textBio = null;
+	if (window.location.pathname.substring(1) === 'profile-people') {
+		name = 'Zayn Malik';
+		username = '@zayn';
+		location = window.location.pathname.substring(1);
+		textBio = 'Nobody is Listening Out Now! www.inzayn.com';
+	}
 	return(
 		<div className="sidebar sb-list-toggle">
 			<header className="sb-header">
-				<img src={ DumbGramIcon } alt="dumgram-icon" />
+				<img src={ DumbGramIcon } alt="dumb-ico" />
 			</header>
 			<div className="sb-name-bio">
-				<img src={ PenIcon } className="sb-pen-icon" alt="pen" />
-				<img src={ Rt3 } className="sb-img" alt="foto-profile" />
-				<p className="sb-name">Lisa</p>
-				<p className="sb-username">@lalalisa_m</p>
+				{ (location !== 'profile-people')&&<img src={ PenIcon } className="sb-pen-icon" alt="pen" />}
+				{
+					(location === 'profile-people')?
+					<img src={ ZaynImg } className="sb-img" alt="foto-profile" />:<img src={ Rt3 } className="sb-img" alt="foto-profile" />
+				}
+				<p className="sb-name">{ name || 'Lisa' }</p>
+				<p className="sb-username">{ username || '@lalalisa_m'}</p>
+			</div>
+			<div className="sb-fm">
+				<button className="sb-btn-message-rainbow">Message</button>
+				<button className="sb-btn-follow">Unfollow</button>
 			</div>
 			<div className="sb-pff">
 				<ul>
@@ -28,7 +46,7 @@ export default function Sidebar() {
 					</li>
 					<li className="sb-center">
 						<p>Follower</p>
-						<p className="sb-count">5.2M</p>
+						<p className="sb-count">5.2 M</p>
 					</li>
 					<li>
 						<p>Following</p>
@@ -37,7 +55,7 @@ export default function Sidebar() {
 				</ul>
 			</div>
 			<div className="sb-bio">
-				<p className="sb-bio-text">Rapper in Black Pink, Brand Ambasador Penshoppe</p>
+				<p className="sb-bio-text">{textBio || 'Rapper in Black Pink, Brand Ambasador Penshoppe'}</p>
 			</div>
 			<div className="sb-nav-link">
 				<ul>
