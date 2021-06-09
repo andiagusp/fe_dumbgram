@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Feed from './pages/Feed';
+import Explore from './pages/Explore';
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -10,6 +11,9 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
+          <Route path="/explore">
+            <Explore />
+          </Route>
           <Route path="/feed">
             <Feed />
           </Route>

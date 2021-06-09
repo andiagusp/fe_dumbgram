@@ -1,0 +1,18 @@
+.explorecontent {
+	color: #fff;
+	margin-left: 350px;
+	background-color: rgba(11, 11, 11, 1);
+	width: calc(100% - 350px);
+	margin-top: 140px;
+	padding: 20px;
+}
+
+.explorecontent > .row {
+	margin-right: 30px;
+}
+
+.ec-img {
+	width: 300px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}

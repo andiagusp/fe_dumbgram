@@ -43,13 +43,13 @@ export default function Sidebar() {
 				<ul>
 					<hr className="sb-line"/>
 					<li className="sb-li">
-						<Link className="sb-li-link" to="/">
+						<Link className="sb-li-link" to="/feed">
 							<img src={ HomeIcon } alt="home" />
 							<span className="sb-li-text">Feed</span>
 						</Link>
 					</li>
 					<li className="sb-li">
-						<Link className="sb-li-link" to="/">
+						<Link className="sb-li-link" to="/explore">
 							<img src={ ExploreIcon } alt="home" />
 							<span className="sb-li-text">Explore</span>
 						</Link>

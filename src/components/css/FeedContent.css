@@ -7,6 +7,10 @@
 	padding: 20px;
 }
 
+.feedcontent > .row {
+	margin-right: 30px;
+} 
+
 .fc-card {
 	width: 300px;
 }
