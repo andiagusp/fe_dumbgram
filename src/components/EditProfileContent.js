@@ -4,7 +4,7 @@ export default function EditProfileContent() {
 
 	return (
 		<div className="editprofilecontent">
-			<form action={ handleFormEdit }>
+			<form onSubmit={ handleFormEdit }>
 				<div className="epc-form-group">
 					<button className="epc-btn-upv">Upload Photos</button>
 				</div>

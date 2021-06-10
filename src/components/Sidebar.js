@@ -15,7 +15,10 @@ export default function Sidebar() {
 	let location = null;
 	let textBio = null;
 	let buttonFollow = null;
+	let iconPen = (<Link to="/edit-profile"><img src={ PenIcon } className="sb-pen-icon" alt="pen" /></Link>);
+	if (window.location.pathname.substring(1) === 'edit-profile') iconPen = null
 	if (window.location.pathname.substring(1) === 'profile-people') {
+		iconPen = null;
 		name = 'Zayn Malik';
 		username = '@zayn';
 		location = window.location.pathname.substring(1);
@@ -33,9 +36,7 @@ export default function Sidebar() {
 				<img src={ DumbGramIcon } alt="dumb-ico" />
 			</header>
 			<div className="sb-name-bio">
-				{ (location !== 'edit-profile' && location !== 'profile-people')?
-          <Link to="/edit-profile"><img src={ PenIcon } className="sb-pen-icon" alt="pen" /></Link> : ''
-        }
+				{ iconPen }
 				{
 					(location === 'profile-people')?
 					<img src={ ZaynImg } className="sb-img" alt="foto-profile" />:<img src={ Rt3 } className="sb-img" alt="foto-profile" />
