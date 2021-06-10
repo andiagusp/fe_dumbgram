@@ -8,7 +8,7 @@
 }
 
 .feedcontent > .row {
-	margin-right: 30px;
+	margin-right: 10px;
 } 
 
 .fc-card {
@@ -27,6 +27,10 @@
 	margin-bottom: 15px;
 }
 
+.fc-card-img-wrapper:hover {
+	cursor: pointer;
+}
+
 .fc-card > p {
 	text-align: right;
 	margin-top: 10px;
@@ -39,4 +43,9 @@
 
 .fc-cf-right > img {
 	margin-left: 10px;
+}
+
+.fc-cf-left > img {
+	width: 24px;
+	height: 24px;
 }

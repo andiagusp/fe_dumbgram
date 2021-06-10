@@ -10,6 +10,15 @@
 	overflow-y: auto;
 }
 
+.sb-bg-rainbow {
+	width: 160px;
+	height: 160px;
+	margin: 0 auto;
+	padding: 5px;
+	border-radius: 50%;
+	background: linear-gradient(90deg, #4DD4F7 0%, #9090FB 30.73%, #FF6B81 68.75%, #FBDF63 100%);
+}
+
 .sidebar::-webkit-scrollbar {
 	display: none;
 }
@@ -29,6 +38,11 @@
 	color:  #fff;
 	margin-bottom: 30px;
 	position: relative;
+}
+
+.sb-name-bio > img {
+	width: 150px;
+	height: 150px;
 }
 
 .sb-list-icon:hover {

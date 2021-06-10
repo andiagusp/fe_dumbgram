@@ -1,0 +1,62 @@
+.notif {
+	color: 14px;
+}
+
+.n-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .3);
+  z-index: 1;
+  color: #fff;
+}
+
+.n-body {
+	position: fixed;
+	top: 100px;
+	right: 280px;
+	width: 320px;
+	background-color: rgba(31, 31, 31, 1);
+	z-index: 2;
+	border-radius: 5px;
+	padding: 10px 20px 10px;
+}
+
+.n-body:after {
+	content: '';
+	top: -30px;
+	right: 15px;
+	width: 0;
+	height: 0;
+	border-right: 20px solid transparent;
+	border-left: 20px solid transparent;
+	border-bottom: 50px solid rgba(31, 31, 31, 1);
+	position: absolute;
+}
+
+.n-people-come {
+	margin: 10px 0;
+}
+
+.n-people-come > img {
+	width: 24px;
+	height: 24px;
+}
+
+.n-name {
+	margin-left: .5em;
+}
+
+.n-notif {
+	margin-left: 2em;
+	word-wrap: break-word;
+	color: rgba(255, 255, 255, .7);
+}
+
+.n-notif > span {
+	color: #fff;
+}
+
+

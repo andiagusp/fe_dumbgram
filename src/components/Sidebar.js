@@ -37,10 +37,12 @@ export default function Sidebar() {
 			</header>
 			<div className="sb-name-bio">
 				{ iconPen }
+				<div className="sb-bg-rainbow">
 				{
 					(location === 'profile-people')?
 					<img src={ ZaynImg } className="sb-img" alt="foto-profile" />:<img src={ Rt3 } className="sb-img" alt="foto-profile" />
 				}
+				</div>
 				<p className="sb-name">{ name || 'Lisa' }</p>
 				<p className="sb-username">{ username || '@lalalisa_m'}</p>
 			</div>

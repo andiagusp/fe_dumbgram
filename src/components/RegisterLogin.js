@@ -63,7 +63,7 @@ export default function RegisterLogin(props) {
    modal = (
     <>
       <div className="rl-overlay"  onClick={ handleCloseRegister }></div>
-        <div className="r-body">
+      <div className="r-body">
         <h1 className="r-title">Register</h1>
         <div className="r-content">
           <form onSubmit={ handleFormSubmitRegister }>

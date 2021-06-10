@@ -1,0 +1,119 @@
+.detailfeed {
+	color: #fff;
+}
+
+.df-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 1;
+  color: #fff;
+}
+
+.df-body {
+	box-sizing: border-box;
+  position: fixed;
+  border-radius: 5px;
+  background-color: #1F1F1F;
+  top: 20px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.df-left,
+.df-left > img {
+	width: 490px;
+	height: 638px;
+	border-radius: 5px 0 0 5px;
+}
+
+.df-right {
+	padding: 30px 10px 30px 20px;
+	width: 300px;
+	position: relative;
+}
+
+.df-close-feed {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-weight: 900;
+}
+
+.df-close-feed:hover {
+	cursor: pointer;
+	color: rgba(171, 171, 171, 0.3);
+}
+
+.df-close-feed:active {
+	font-weight: 900;
+	color: #fff;
+}
+
+.df-feed-myfeed {
+	border-bottom: 1px solid rgba(171, 171, 171, 0.3);
+	padding-bottom: 10px;
+}
+
+.df-feed-name {
+	margin-left: 1em;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.df-feed-cap {
+	color: rgba(171, 171, 171, 1);
+	margin-left: 2.5em;
+	word-wrap: break-word;
+}
+
+.df-comment-people {
+	margin: 15px 0 10px;
+	height: 360px;
+	overflow-y: auto;
+}
+
+.df-comment-people::-webkit-scrollbar {
+	display: none;
+}
+
+.df-comment {
+	width: 100%;
+	border-radius: 5px;
+	padding: 10px;
+	background-color: rgba(92, 92, 92, 1);
+	border: 1px solid rgba(92, 92, 92, 5);
+	color: #fff;
+	font-weight: 700;
+}
+
+.df-icon-lcs {
+	text-align: right;
+	color: rgba(171, 171, 171, 1);
+}
+
+.df-icon-lcs > img {
+	margin-left: 10px;
+}
+
+.df-icon-lcs > p {
+	margin-top: 5px;
+}
+
+.df-comment:focus {
+	outline: none;
+}
+
+.df-feed-myfeed > img 
+.df-comment-people > img {
+	width: 24px;
+	height: 24px;
+}
+
