@@ -2,6 +2,11 @@
 	color: #fff;
 }
 
+.df-feed-name:hover {
+	text-decoration: none;
+	color: rgba(171,171,171,1);
+}
+
 .df-overlay {
   position: fixed;
   top: 0;
@@ -66,6 +71,7 @@
 	margin-left: 1em;
 	font-size: 14px;
 	font-weight: 700;
+	color: #fff;
 }
 
 .df-feed-cap {

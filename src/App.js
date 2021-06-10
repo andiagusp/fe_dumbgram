@@ -5,6 +5,7 @@ import Explore from './pages/Explore';
 import ProfilePeople from './pages/ProfilePeople';
 import CreatePost from './pages/CreatePost';
 import EditProfile from './pages/EditProfile';
+import Message from './pages/Message';
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -14,6 +15,12 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
+          <Route path="/message/:uid">
+            <Message />
+          </Route>
+          <Route path="/message">
+            <Message />
+          </Route>
           <Route path="/edit-profile">
             <EditProfile />
           </Route>

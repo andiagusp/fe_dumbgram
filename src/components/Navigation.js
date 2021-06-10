@@ -24,7 +24,7 @@ export default function Navigation(props) {
 				</div>
 				<div className="nav-top-left">
 					<BsBell className="nav-right-icon" onClick={ handleShowNotif } />
-					<img src={ MessageIcon } className="nav-msg-icon" alt="messageair" />
+					<Link to="/message"><img src={ MessageIcon } className="nav-msg-icon" alt="messageair" /></Link>
 					<Link to="/create-post"><button className="nav-btn-rainbow"><span>+</span>Create Post</button></Link>	
 				</div>
 			</section>

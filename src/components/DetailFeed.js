@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './css/DetailFeed.css';
 import DetailFeedImg from '../img/DetailFeed.png';
 import ZaynProfile from '../img/cardicon.png';
@@ -26,8 +27,8 @@ export default function DetailFeed(props) {
 				<section className="df-right">
 					<span className="df-close-feed" onClick={ handleCloseFeed }>x</span>
 					<div className="df-feed-myfeed">
-						<img src={ ZaynProfile } alt="zayn"/>
-						<span className="df-feed-name">Zayn</span>
+						<Link to="/profile-people"><img src={ ZaynProfile } alt="zayn"/></Link>
+						<Link to="/profile-people" className="df-feed-name"><span>Zayn</span></Link>
 						<p className="df-feed-cap">To Begin Again..</p>
 					</div>
 					<div className="df-comment-people">
