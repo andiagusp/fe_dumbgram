@@ -1,78 +1,79 @@
-.feedcontent {
+.feedcontentpeople {
 	color: #fff;
 	margin-left: 350px;
 	min-height: 80vh;
 	background-color: rgba(11, 11, 11, 1);
 	width: calc(100% - 350px);
-	margin-top: 140px;
-	padding: 20px;
+	margin-top: 20vh;
+	padding: 40px 20px;
 }
 
-.fc-feed {
+.fcp-feed {
 	column-count: 3;
 	gap: 15px;
 }
 
-.fc-feed .fc-card > img { 
-	width: 100%;
-	object-fit: cover;
-	margin-bottom: 10px;
-	border-radius: 5px 5px 0 0;
-}
-
-.fc-card {
+.fcp-feed .fcp-card {
 	break-inside: avoid;
 	box-shadow: 0 2px 5px rgba(200, 200, 200, .8),
 							0 -2px 5px rgba(200, 200, 200, .8);
 	border-radius: 5px;
 }
 
-.fc-card-feedback {
+.fcp-feed .fcp-card > img {
+	width: 100%;
+	object-fit: cover;
+}
+
+.fcp-feed .fcp-card > img:hover {
+	cursor: pointer;
+}
+
+.fcp-card-feedback {
 	display: flex;
 	justify-content: space-between;
 	margin: 0 5px;
 }
 
-.fc-card-img {
-	border-radius: 5px;
-	margin-bottom: 10px;
+.fcp-card-img {
 	width: 300px;
+	border-radius: 5px 5px 0 0;
+	margin-bottom: 15px;
 }
 
-.fc-card-img-wrapper:hover {
+.fcp-card-img-wrapper:hover {
 	cursor: pointer;
 }
 
-.fc-card > p {
+.fcp-card > p {
 	text-align: right;
-	margin-right: 5px;
 }
 
-.fc-card-icon-profile {
+.fcp-card-icon-profile {
 	width: 24px;
 	border-radius: 50%;
 }
 
-.fc-cf-right > img {
+.fcp-cf-right > img {
 	margin-left: 10px;
 }
 
-.fc-cf-left {
+.fcp-cf-left {
 	display: flex;
 }
 
-.fc-cf-name {
+.fcp-cf-name {
 	margin-left: .5em;
 	font-size: 14px;
 }
 
-.fc-cf-left > img {
+.fcp-cf-left > img {
 	width: 24px;
 	height: 24px;
 	border-radius: 50%;
 }
 
-.fc-cf-right > img:hover {
+.fcp-cf-right > img:hover {
 	cursor: pointer;
 }
 
@@ -83,3 +84,4 @@
 .cf-love-icon:active {
 	transform: scale(0.5);
 }
+

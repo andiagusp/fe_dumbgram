@@ -21,12 +21,33 @@
 .mc-chatting-body img {
 	width: 50px;
 	height: 50px;
+	border-radius: 50%;
+	position: relative;
+	top: 2px;
+	right: 1px;
 }
 
 .mc-message-incomming,
 .mc-message-outgoing {
 	display: flex;
 	margin: 10px;
+}
+
+.mc-wrap-rainbow {
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+	background: linear-gradient(90deg, #4DD4F7 0%, #9090FB 30.73%, #FF6B81 68.75%, #FBDF63 100%);
+	background-color: #fff;
+	text-align: center;
+}
+
+/* .mc-wrap-rainbow img {
+	align-self: center;
+} */
+
+.mc-message-outgoing {
+	justify-content: flex-end;
 }
 
 .mc-message-outgoing {

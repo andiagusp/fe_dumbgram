@@ -1,0 +1,78 @@
+.searchmodal {
+	color: 14px;
+}
+
+.sm-overlay {
+  position: fixed;
+  top: 100px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .3);
+  z-index: 1;
+  color: #fff;
+}
+
+.sm-body {
+	position: fixed;
+	top: 100px;
+	left: 370px;
+	width: 300px;
+	max-height: 80vh;
+	background-color: rgba(31, 31, 31, 1);
+	z-index: 2;
+	border-radius: 5px;
+	padding: 10px;
+	box-shadow: 0 2px 5px rgba(200,200,200, .5),
+							0 -2px 5px rgba(200,200,200, .5);
+}
+
+.sm-wrapper {
+	margin: 1em;
+	display: flex;
+}
+
+.sm-wrapper > a {
+	align-self: center;
+}
+
+.sm-wrapper > a:hover {
+	text-decoration: none;
+}
+
+.sm-wrapper > a:active {
+	background-color: rgba(200,200,200, .5);
+	color:rgba(31, 31, 31, .8);
+}
+
+.sm-title {
+	border-bottom: 1px solid rgba(200,200,200, .7);
+	padding-bottom: 10px;
+	text-align: center;
+	font-weight: 700;
+}
+
+.sm-text {
+	font-size: 16px;
+	color: rgba(255, 255, 255, 0.8);
+	font-weight: 900;
+	letter-spacing: 2px;
+}
+
+.sm-rainbow  img {
+	top: 2.2px;
+	left: 2.3px;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+.sm-rainbow  {
+	position: relative;
+	border-radius: 50%;
+	width: 45px;
+	height: 45px;
+	margin-right: 1em;
+	background: linear-gradient(90deg, #4DD4F7 0%, #9090FB 30.73%, #FF6B81 68.75%, #FBDF63 100%);
+}

@@ -5,12 +5,25 @@
 	width: calc(100% - 350px);
 	margin-top: 140px;
 	padding: 50px 20px;
-	height: calc(100vh - 140px);
+	min-height: calc(100vh - 140px);
 	font-size: 18px;
 }
 
 .cpc-form-group {
 	margin: 10px 0;
+}
+
+.cpc-form-group input[type="file"] {
+	display: none;
+}
+
+.cp-preview {
+	width: 150px;
+	height: 150px;
+}
+
+.pointer:hover {
+	cursor: pointer;
 }
 
 .cpc-btn-upv,

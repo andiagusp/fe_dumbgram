@@ -5,12 +5,19 @@
 	width: calc(100% - 350px);
 	margin-top: 120px;
 	padding: 50px 20px;
-	height: calc(100vh - 80px);
+	min-height: calc(100vh - 120px);
 	font-size: 18px;
 }
 
 .epc-form-group {
 	margin: 15px 0;
+}
+
+.epc-form-group > img {
+	margin: 10px 0;
+	width: 150px;
+	display: block;
+	object-fit: cover;
 }
 
 .epc-btn-upv,
@@ -23,6 +30,14 @@
 	border: none;
 	outline: none;
 	color: #fff;
+}
+
+.epc-btn-upv:hover {
+	cursor: pointer;
+}
+
+.epc-btn-upv > input[type="file"] {
+	display: none;
 }
 
 .epc-form-input {

@@ -15,7 +15,7 @@
   position: fixed;
   border-radius: 5px;
   background-color: #1F1F1F;
-  top: 100px;
+  top: 50px;
   left: 0;
   right: 0;
   z-index: 2;
@@ -67,7 +67,8 @@
   padding: 15px;
 }
 
-.r-btn-rainbow:active {
+.r-btn-rainbow:active,
+.l-btn-rainbow:active {
   background: #fff;
   color: #000;
 }
@@ -95,4 +96,3 @@
   cursor: pointer;
   color: rgba(177, 177, 177, 1);
 }
-

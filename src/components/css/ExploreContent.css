@@ -3,16 +3,29 @@
 	margin-left: 350px;
 	background-color: rgba(11, 11, 11, 1);
 	width: calc(100% - 350px);
+	min-height: calc(100vh - 140px);
 	margin-top: 140px;
 	padding: 20px;
 }
 
-.explorecontent > .row {
-	margin-right: 30px;
+.e-image-explore {
+	column-count: 3;
+	gap: 15px;
 }
 
-.ec-img {
+.e-card-image {
+	break-inside: avoid;
+	margin-bottom: 15px;
+	box-shadow: 0 2px 5px rgba(200, 200, 200, .8);
+	border-radius: 5px;
+}
+
+.e-image-explore .e-card-image img {
+	width: 100%;
+	object-fit: cover;
+}
+
+.e-img {
 	width: 300px;
 	border-radius: 5px;
-	margin-bottom: 10px;
 }

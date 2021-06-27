@@ -32,11 +32,19 @@
   display: flex;
 }
 
-.df-left,
-.df-left > img {
+.df-left {
 	width: 490px;
 	height: 638px;
 	border-radius: 5px 0 0 5px;
+	display: grid;
+	place-items: center;
+  background-color: rgba(20,20,20, .8);
+}
+
+.df-left > img{
+	max-width: 490px;
+	max-height: 638px;
+	object-fit: cover;
 }
 
 .df-right {
@@ -117,9 +125,17 @@
 	outline: none;
 }
 
-.df-feed-myfeed > img 
-.df-comment-people > img {
+.df-feed-myfeed img,
+.df-comment-people > section > img {
 	width: 24px;
 	height: 24px;
+	border-radius: 50%;
 }
 
+.df-love-icon:hover {
+	cursor: pointer;
+}
+
+.df-love-icon:active {
+	transform: scale(0.5);
+}

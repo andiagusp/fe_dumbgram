@@ -24,16 +24,59 @@
 	margin: 10px 5px;
 }
 
-.sm-list-message > img {
+.sm-message {
+	display: flex;
+	margin-bottom: 1em;
+}
+
+.sm-message:hover {
+	cursor: pointer;
+}
+
+.sm-message:hover span {
+	cursor: pointer;
+	color: rgba(200, 200, 200, .8);
+}
+
+.sm-message img {
+	position: relative;
+	top: 2px;
+	left: 2.4px;
+	border-radius: 50%;
 	width: 50px;
 	height: 50px;
 }
 
+.sm-wrap-rainbow {
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+	background: linear-gradient(90deg, #4DD4F7 0%, #9090FB 30.73%, #FF6B81 68.75%, #FBDF63 100%);
+}
+
+.sm-message > a,
+.sm-message > a:hover {
+	color: #fff;
+}
+
+.sm-message > a:active {
+	background-color: rgba(171, 171, 171, 1);
+}
+
+.sm-message > a:hover {
+	text-decoration: none;
+}
+
 .sm-name {
 	margin-left: 1em;
+	font-weight: bold;
+}
+
+.sm-nm {
+	align-self: center;
 }
 
 .sm-text-message {
-	margin-left: 4.5em;
+	margin-left: 1em;
 	color: rgba(171, 171, 171, 1);
 }
