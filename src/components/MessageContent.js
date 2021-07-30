@@ -20,6 +20,12 @@ export default function MessageContent(props){
 	}, [uid]);
 
 	useEffect(() => {
+		setInterval(() => {
+			getMessage(uid);
+		}, 5000);
+	}, []);
+
+	useEffect(() => {
 		scrollToBottom();
 	}, [chatList]);
 
@@ -71,7 +77,10 @@ export default function MessageContent(props){
 								<div className="mc-wrap-rainbow mc-img-outgoing">
 									<img src={ `${path}${chat.user.image}` } alt="outgoing"/>
 								</div>
-								<span className="mc-text-outgoing">{ chat.message }</span>
+								<div>
+								<p className="mc-text-outgoing">{ chat.message }</p>
+								<p className="mc-text-date">{ chat?.createdAt }</p>
+								</div>
 							</div>
 						)
 						:
@@ -80,7 +89,10 @@ export default function MessageContent(props){
 								<div className="mc-wrap-rainbow">
 									<img src={ `${path}${chat.user.image}` } alt="incoming"/>
 								</div>
-								<span className="mc-text-incomming">{ chat.message }</span>
+								<div>
+									<p className="mc-text-incomming">{ chat.message }</p>
+									<p className="mc-text-date">{ chat?.createdAt }</p>
+								</div>
 							</div>
 						);
 					})

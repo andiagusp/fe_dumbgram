@@ -6,6 +6,7 @@ import './css/CreatePostContent.css';
 export default function ExploreContent() {
 	const [input, setInput] = useState({ caption: '', imageFile: '' });
 	const [isSuccess, setSuccess] = useState(false);
+	const [isError, setError] = useState(false);
 	const [preview, setPreview] = useState();
 	
 
@@ -24,7 +25,8 @@ export default function ExploreContent() {
 			setInput({ caption: '', imageFile: '' });
 			setPreview();
 		} catch (error) {
-			console.log(error?.response);
+			setError(true);
+			setTimeout(() => setError(false), 5000);
 		}
 	}
 
@@ -45,6 +47,11 @@ export default function ExploreContent() {
 			{ (isSuccess) &&
 				<Alert variant="success" style={{ width: '97%' }}>
 	    		Success Upload Foto
+	  		</Alert>
+			}
+			{(isError) &&
+				<Alert variant="success" style={{ width: '97%' }}>
+	    		Please Upload Photo
 	  		</Alert>
 			}
 			<form onSubmit={ handleFormUpload }>

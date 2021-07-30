@@ -1,4 +1,5 @@
 import { useContext, useState } from 'react';
+import { Alert } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import { API } from '../config/api';
 import { UserContext } from '../context/UserContext';
@@ -8,6 +9,8 @@ export default function EditProfileContent(props) {
 	const history = useHistory();
 	const { setChange } = props;
 	const [state, dispatch] = useContext(UserContext);
+	const [isError, setError] = useState(false);
+	const [message, setMessage] = useState();
 	const [preview, setPreview] = useState();
 	const [profile, setProfile] = useState({
 		fullName: state.user.fullName,
@@ -36,7 +39,9 @@ export default function EditProfileContent(props) {
 			});
 			getProfile();
 		} catch (error) {
-			console.log(error);
+			setError(true);
+			setMessage(error?.response.data.message);
+			console.log(error?.response);
 		}
 	}
 
@@ -73,6 +78,7 @@ export default function EditProfileContent(props) {
 		<div className="editprofilecontent">
 			<form onSubmit={ handleFormEdit }>
 				<div className="epc-form-group">
+					{ (isError) && <Alert variant="success">{ message }</Alert> }
 					<label className="epc-btn-upv">
 						<input type="file" name="imageFile" onChange={ handleInputEdit } />
 						Upload Photos

@@ -36,13 +36,13 @@ export default function SidebarPeople(props) {
 		try {
 			const followers = await API.get(`/followers/${uid}`);
 			const following = await API.get(`/following/${uid}`);
-			const feeds = await API.get(`/feeds`);
-			const feed = feeds?.data?.data?.feeds.filter((f) => f.user.id === +uid);
+			const feeds = await API.get(`/feeds/${uid}`);
+			
 			const isFoll = followers?.data?.data?.followers?.find((f) => f.user.id === state.user.id);
-
+			console.log(feeds.data.data)
 			isFoll ? setFollow(true) : setFollow(false);
 			setFollows({
-				post: feed.length, 
+				post: feeds?.data?.data?.feeds.length, 
 				followers: followers?.data?.data?.followers?.length,
 				following: following?.data?.data?.following?.length
 			})
@@ -88,6 +88,10 @@ export default function SidebarPeople(props) {
 		getFollows();
 	}, []);
 
+	const goToMessage = () => {
+		route.push(`/message/${uid}`);
+	}
+
 	const handleLogout = () => {
 		dispatch({
 			type: 'logout'
@@ -111,7 +115,7 @@ export default function SidebarPeople(props) {
 			</div>
 			{ (+uid !== state?.user?.id) &&
 				<div className="sb-fm">
-					<button className="sb-btn-message-rainbow">Message</button>
+					<button className="sb-btn-message-rainbow" onClick={ goToMessage }>Message</button>
 					<button className="sb-btn-follow" onClick={ handleButtonFollow }>{ (isFollow)? 'Unfollow' : 'Follow' }</button>
 				</div>
 			}

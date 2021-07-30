@@ -1,16 +1,20 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import DetailFeed from './DetailFeed';
 import CardFeed from './FeedContent/CardFeed';
 import './css/FeedContent.css';
 import { API } from '../config/api';
+import { UserContext } from '../context/UserContext';
 
 export default function FeedContent() {
+	const [state, dispatch] = useContext(UserContext);
 	const [detail, setDetail] = useState();
 	const [detailFeed, setDetailFeed] = useState(false);
-	const handleDetailFeed = () => setDetailFeed(!detailFeed);
 	const [feeds, setFeeds] = useState([]);
-	const [likes, setLikes] = useState(); 
+	const [likes, setLikes] = useState();
+	const { id } = state.user;
+
+	const handleDetailFeed = () => setDetailFeed(!detailFeed);
 
 	const feedByFollow = async () => {
 		try {
@@ -46,6 +50,7 @@ export default function FeedContent() {
 								likes={ likes }
 								setLikes={ setLikes }
 								key={ index }
+								currentid={ id }
 							/>
 						);
 					})
@@ -56,6 +61,7 @@ export default function FeedContent() {
 					data={ detail }
 					setData={ setDetail }
 					likes={ likes }
+					currentid={ id }
 				/>
 			</div>
 		</main>

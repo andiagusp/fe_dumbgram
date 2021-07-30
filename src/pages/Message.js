@@ -14,7 +14,7 @@ export default function Message() {
 	return (
 		<div className="message">
 			<Navigation name={ name } setUid={ setUuid } />
-			<SidebarMessage uid={ uuid } setName={ setName } />
+			<SidebarMessage uid={ uuid } setUid={ setUuid } setName={ setName } />
 			<MessageContent uid={ uuid } />
 		</div>
 	);

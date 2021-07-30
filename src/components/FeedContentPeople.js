@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import C2 from '../img/rt7.png';
 import MessageAir from '../img/messageair.png';
@@ -8,10 +8,13 @@ import CommentIcon from '../img/commenticon.png';
 import { FcLike } from 'react-icons/fc';
 import { API } from '../config/api';
 import DetailFeed from './DetailFeed';
+import { UserContext } from '../context/UserContext';
 import CardFeedPeople from './FeedContentPeople/CardFeedPeople';
 
 export default function FeedContentPeople(props){
 	const path = 'http://localhost:5000/uploads/';
+	const [state, dispatch] = useContext(UserContext);
+	const { id } = state.user; 
 	const { uid } = props;
 	const isLike = false;
 	const [show, setShow] = useState(false);
@@ -52,6 +55,7 @@ export default function FeedContentPeople(props){
 							setLikes= { setLikes }
 							setDetail={ setSend }
 							key={ index }
+							currentid={ id }
 						/>
 					))
 				}
@@ -61,6 +65,7 @@ export default function FeedContentPeople(props){
 					data={ send }
 					setData={ setSend }
 					likes={ likes }
+					currentid={ id }
 				/>
 			</div>
 		</main>

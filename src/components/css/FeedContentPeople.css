@@ -10,13 +10,13 @@
 
 .fcp-feed {
 	column-count: 3;
-	gap: 15px;
+	gap: 20px;
 }
 
 .fcp-feed .fcp-card {
 	break-inside: avoid;
-	box-shadow: 0 2px 5px rgba(200, 200, 200, .8),
-							0 -2px 5px rgba(200, 200, 200, .8);
+	/*box-shadow: 0 2px 5px rgba(200, 200, 200, .8),
+							0 -2px 5px rgba(200, 200, 200, .8);*/
 	border-radius: 5px;
 }
 

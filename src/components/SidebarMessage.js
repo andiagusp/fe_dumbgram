@@ -15,7 +15,9 @@ export default function SidebarMessage(props) {
 	const [list, setList] = useState([]);
 
 	useEffect(() => {
-		getList();
+		setInterval(() => {
+			getList();
+		}, 5000);
 		setFirst(false);
 	}, []);
 
@@ -29,7 +31,7 @@ export default function SidebarMessage(props) {
 		try {
 			const res = await API.get('/message-last');
 			setList(res?.data?.data?.message);
-			console.log(res?.data?.data?.message)
+			console.log(res?.data?.data)
 			setName('Message');
 		} catch (error) {
 			console.log(error?.response);
@@ -74,10 +76,10 @@ export default function SidebarMessage(props) {
 					list?.map((list, index) => (
 						<section className="sm-message" key={ index } onClick={ () => changeUid(list?.senderMessageId) }>
 							<div className="sm-wrap-rainbow">
-								<img src={ `${path}${list.image}` } alt="notifmessage1" />
+								<img src={ `${path}${list.sender.image}` } alt="notifmessage1" />
 							</div>
 							<div className="sm-nm">
-								<span className="sm-name">{ list?.username }</span>
+								<span className="sm-name">{ list?.sender.username }</span>
 								<p className="sm-text-message">{ list?.message }</p>
 							</div>
 						</section>

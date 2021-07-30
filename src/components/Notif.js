@@ -35,13 +35,12 @@ export default function Notif(props){
 			<div className="n-overlay" onClick={ handleButtonCloseNotif }></div>
 			<div className="n-body">
 			<p className="n-notif-header">Notification</p>
-		{
-			listNotif?.map((list) => (
-				<section className="n-people-come">
-					<img src={ `${path}${list?.fileName}` } className="n-img" alt="" />
-					<span className="n-name">{ list?.caption }</span>
-					<p className="n-time-post">{ list?.createdAt }</p>
-
+			{	
+				listNotif?.map((list) => (
+					<section className="n-people-come">
+						<img src={ `${path}${list?.fileName}` } className="n-img" alt="" />
+						<span className="n-name">{ list?.caption }</span>
+						<p className="n-time-post">{ list?.createdAt }</p>
 						{
 							list.comment.map((comment) => (
 								<section className="n-people-comment">
@@ -52,8 +51,7 @@ export default function Notif(props){
 								</section>	
 							))
 						}
-						<hr />
-				</section>
+					</section>	
 			))	
 		}
 				<section className="n-people-come">

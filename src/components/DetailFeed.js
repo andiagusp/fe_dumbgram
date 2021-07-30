@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './css/DetailFeed.css';
 import LoveIcon from '../img/loveicon.png';
@@ -6,10 +6,12 @@ import CommentIcon from '../img/commenticon.png';
 import MessageAir from '../img/messageair.png';
 import { FcLike } from 'react-icons/fc';
 import { API } from '../config/api';
+import { MdDelete } from 'react-icons/md';
 
 export default function DetailFeed(props) {
 	const path = 'http://localhost:5000/uploads/';
-	const { show, handleClose, data, likes, setData } = props;
+	const { show, handleClose, data, likes, setData, currentid } = props;
+	const commentRef = useRef(null);
 	const [like, setLike] = useState(0);
 	const [isLove, setLove] = useState(false);
 	const [comments, setComments] = useState();
@@ -104,6 +106,21 @@ export default function DetailFeed(props) {
     }
   }
 
+  const deleteComment = async (uid) => {
+  	try {
+      const result = await API.delete(`/comment/${uid}`);
+      console.log(result?.data.data);
+      getComments();
+    } catch (error) {
+      console.log(error)
+      console.log(error?.response);
+    }
+  }
+
+  const goToBottom = () => {
+  	commentRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }
+
 	useEffect(() => {
 		if (data) {
 			getComments();
@@ -112,6 +129,10 @@ export default function DetailFeed(props) {
 			setLike(data?.like);
 		}
 	}, [data]);
+
+	useEffect(() => {
+		goToBottom();
+	}, [comments]);
 
 	const handleCloseFeed = (event) => {
 		handleClose(!show);
@@ -140,9 +161,12 @@ export default function DetailFeed(props) {
 									<img src={ `${path}${comment?.user?.image}` }  alt="comment-pict" />
 									<span className="df-feed-name">{ comment?.user?.username }</span>
 									<p className="df-feed-cap">{ comment?.comment }</p>
+									<p className="df-feed-date">{ comment?.createdAt }</p>
+									{ (comment?.user?.id === currentid) && <MdDelete className="df-icon-trash" onClick={ () => deleteComment(comment?.id) } /> }
 								</section>
 							))
 						}
+						<div ref={ commentRef } />
 					</div>
 					<div className="df-lcsi">
 						<div className="df-icon-lcs">

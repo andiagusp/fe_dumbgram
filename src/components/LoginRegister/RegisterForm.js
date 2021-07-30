@@ -33,7 +33,7 @@ export default function RegisterForm(props) {
       });
     } catch (error) {
       setError(error.response.data.message);
-      console.log(error.response.data);
+      console.log(error?.response);
     }
   }
 
